@@ -1,25 +1,15 @@
 import Browser
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (onInput)
+import Html exposing (Html, button, div, text)
+import Html.Events exposing (onClick)
 
 
 
--- MAIN
-
-
-main =
-  Browser.sandbox { init = x,  view = view }
-
-type alias Model = (List Int)
-x: Model
-x = [77,78,81,85,90]
--- VIEW
-
-
-view : Model -> Html Msg
 view model =
   div []
-    [ text x ]
+    [ button [ ] [ text "-" ]
+    , div [] [ text "here here hear" ]
+    , button [  ] [ text "+" ]
+    ]
 
-
+main =
+    view "dummy model"
